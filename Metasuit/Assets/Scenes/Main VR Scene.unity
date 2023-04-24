@@ -1239,8 +1239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fef334b22c8b2c4c841412c90665c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 0}
+  colorDefault: {r: 1, g: 1, b: 1, a: 1}
   colorActivated: {r: 0.25599998, g: 0.8, b: 0.16, a: 0}
+  startApplicationButton: {fileID: 1185605429}
+  isActivated: 0
 --- !u!1 &311294107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,7 +2796,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1359258674}
-        m_TargetAssemblyTypeName: RotateAroundLocalYAxis3_5, Assembly-CSharp
+        m_TargetAssemblyTypeName: RotateAroundLocalYAxis, Assembly-CSharp
         m_MethodName: RotationUpdate
         m_Mode: 0
         m_Arguments:
@@ -2805,8 +2807,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 1180110284}
-        m_TargetAssemblyTypeName: RotateAroundLocalYAxis6, Assembly-CSharp
+      - m_Target: {fileID: 1180110286}
+        m_TargetAssemblyTypeName: RotateAroundLocalYAxis, Assembly-CSharp
         m_MethodName: RotationUpdate
         m_Mode: 0
         m_Arguments:
@@ -5154,7 +5156,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1632252726}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1180110284
+--- !u!114 &1180110286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5163,18 +5165,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180110283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b33d0224bc262f46821c461697f50c9, type: 3}
+  m_Script: {fileID: 11500000, guid: fdfb4e707abdd1c4eadb3876078b31b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selfsensingTesting: 0
   calibrationTime: 2
+  numberOfHasels: 1
+  firstHaselIndex: 7
   calibrateButton1: {fileID: 694939727}
   calibrateButton2: {fileID: 1238134892}
   calibrationSlider: {fileID: 618969303}
-  startApplicationButton: {fileID: 1185605429}
   startCalibrationButton: {fileID: 257901224}
+  startApplicationButton: {fileID: 1185605429}
   dataProcessor: {fileID: 688100863}
-  spineToggle: {fileID: 912850754}
+  bodyPartToggle: {fileID: 912850754}
 --- !u!1 &1185605427
 GameObject:
   m_ObjectHideFlags: 0
@@ -5187,7 +5191,6 @@ GameObject:
   - component: {fileID: 1185605431}
   - component: {fileID: 1185605430}
   - component: {fileID: 1185605429}
-  - component: {fileID: 1185605432}
   m_Layer: 5
   m_Name: StartApplication
   m_TagString: Untagged
@@ -5298,21 +5301,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185605427}
   m_CullTransparentMesh: 1
---- !u!114 &1185605432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185605427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c161745184cd74fb7506b21fcbc6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 0}
-  colorActivated: {r: 0.25834104, g: 0.795, b: 0.159, a: 0}
-  startCallibrationButton: {fileID: 257901224}
 --- !u!1 &1198946965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5620,13 +5608,14 @@ MonoBehaviour:
   selfsensingTesting: 0
   calibrationTime: 2
   numberOfHasels: 1
+  firstHaselIndex: 1
   calibrateButton1: {fileID: 694939727}
   calibrateButton2: {fileID: 1238134892}
   calibrationSlider: {fileID: 618969303}
   startCalibrationButton: {fileID: 257901224}
   startApplicationButton: {fileID: 1185605429}
   dataProcessor: {fileID: 688100863}
-  leftLegToggle: {fileID: 1163874302}
+  bodyPartToggle: {fileID: 1163874302}
 --- !u!1 &1323905655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5718,19 +5707,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359258672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527b289e29f27fe47a10849fdb2f91d8, type: 3}
+  m_Script: {fileID: 11500000, guid: fdfb4e707abdd1c4eadb3876078b31b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selfsensingTesting: 0
   calibrationTime: 2
   numberOfHasels: 1
+  firstHaselIndex: 4
   calibrateButton1: {fileID: 694939727}
   calibrateButton2: {fileID: 1238134892}
   calibrationSlider: {fileID: 618969303}
   startCalibrationButton: {fileID: 257901224}
   startApplicationButton: {fileID: 1185605429}
   dataProcessor: {fileID: 688100863}
-  rightLegToggle: {fileID: 1205495298}
+  bodyPartToggle: {fileID: 1205495298}
 --- !u!1 &1361168830
 GameObject:
   m_ObjectHideFlags: 0
